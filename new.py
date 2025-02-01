@@ -15,7 +15,6 @@ if "dark_mode" not in st.session_state:
 if st.button("Toggle Dark Mode"):
     st.session_state.dark_mode = not st.session_state.dark_mode
 
-# Apply dark mode styles
 if not st.session_state.dark_mode:
     st.markdown("""
     <style>
@@ -28,6 +27,7 @@ if not st.session_state.dark_mode:
         }
     </style>
     """, unsafe_allow_html=True)
+
 
 # Add content to your page to observe the change
 st.title("Dark Mode Toggle Example")

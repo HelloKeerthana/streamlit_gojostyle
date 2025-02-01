@@ -1,22 +1,23 @@
-mostly all streamlit syntaxes being made into a tuto?? yeah ig
-<h1>streamlit</h1>
+<h1>streamlit experience</h1>
 
-<p>yo, welcome to my streamlit project! here, i merged python, machine learning, and a little bit of gojo satoru's limitless power into a fun, interactive app. it’s like stepping into the void, but with sliders and buttons!</p>
+<p>yo, welcome to my streamlit project! here's a quick rundown of the features i used to create this fun, interactive app:</p>
 
-<h2>what is streamlit?</h2>
-<p>think of it as a magic wand for building web apps with python. no crazy front-end stuff—just pure python! and i used it to bring gojo's domain expansion to life.</p>
+<ul>
+    <li><strong>.title</strong> – set the title of the page</li>
+    <li><strong>.write</strong> – add text and descriptions</li>
+    <li><strong>.button</strong> – toggle dark mode and unleash gojo’s power</li>
+    <li><strong>.progress</strong> – show a progress bar for the gojo experience</li>
+    <li><strong>.slider</strong> – control your energy levels</li>
+    <li><strong>.selectbox</strong> – choose your gojo technique (blue, red, hollow purple)</li>
+    <li><strong>.table</strong> – display data (like gojo's techniques)</li>
+    <li><strong>.download_button</strong> – download gojo technique data as CSV</li>
+    <li><strong>.file_uploader</strong> – upload your anime images (maybe gojo himself?)</li>
+    <li><strong>.time_input</strong> – set a time for your next watch party</li>
+    <li><strong>.date_input</strong> – schedule your binge-watch session</li>
+    <li><strong>.image</strong> – display uploaded images in the app</li>
+    <li><strong>.subheader</strong> – highlight sections for better organization</li>
+    <li><strong>.balloons</strong> – celebrate with some fun balloons when you hit certain milestones</li>
+    <li><strong>.divider</strong> – visually separate sections of content</li>
+</ul>
 
-<h2>dark mode vibes</h2>
-<p>i kicked things off with a dark mode toggle because, well, why not? the infinite void looks better in the dark.</p>
-
-<h2>interactive fun</h2>
-<p>you can control your energy, choose your gojo technique (blue, red, hollow purple), and even get predictions from a machine learning model. endless fun!</p>
-
-<h2>wave energy vibes</h2>
-<p>of course, no experience would be complete without a dynamic energy wave. feel the limitless energy flow with each plot!</p>
-
-<h2>upload your vibes</h2>
-<p>upload your favorite anime image (gojo, maybe?) and feel the power of infinity right in your app.</p>
-
-<h2>the void is endless</h2>
-<p>streamlit made this journey super fun. now, it’s your turn to dive in and explore the infinite possibilities!</p>
+<p>that’s a quick look at the streamlit syntax i used to build this app. simple, powerful, and super fun to work with!</p>

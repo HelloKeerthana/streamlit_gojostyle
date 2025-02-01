@@ -1,5 +1,5 @@
 mostly all streamlit syntaxes being made into a tuto?? yeah ig
-<h1>my streamlit adventure: embracing the infinite void 🌌</h1>
+<h1>streamlit</h1>
 
 <p>yo, welcome to my streamlit project! here, i merged python, machine learning, and a little bit of gojo satoru's limitless power into a fun, interactive app. it’s like stepping into the void, but with sliders and buttons!</p>
 

@@ -7,28 +7,7 @@ from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 import time
 
-st.set_page_config(page_title="Gojo Satoru Experience", page_icon="🌀")
-if "dark_mode" not in st.session_state:
-    st.session_state.dark_mode = False
-
-if st.button("Toggle Dark Mode"):
-    st.session_state.dark_mode = not st.session_state.dark_mode
-
-if not st.session_state.dark_mode:
-    st.markdown("""
-    <style>
-        * {
-            background-color: white;
-            color: black;
-        }
-        .stButton button {
-            color: black;
-        }
-    </style>
-    """, unsafe_allow_html=True)
-
-st.title("Dark Mode Toggle Example")
-st.write("Click the button to switch between dark and light mode.")
+st.set_page_config(page_title="streamlit makes html look hard fr", page_icon="🌀")
 
 st.markdown("""
     <style>

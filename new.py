@@ -147,6 +147,9 @@ st.balloons()
 if 'uploaded_image' not in st.session_state:
     st.session_state.uploaded_image = None
 
+st.write("wanna see ur own pic like this then upload below")
+st.image("blahhh" , "https://github.com/HelloKeerthana/streamlit_gojostyle/blob/main/random.jpeg")
+
 # File uploader
 uploaded_file = st.file_uploader("Upload an image (of Gojo maybe 😉)", type=["png", "jpg"])
 
@@ -157,6 +160,8 @@ if uploaded_file and st.session_state.uploaded_image is None:
 # Display the uploaded image (only if it exists in session state)
 if st.session_state.uploaded_image:
     st.image(st.session_state.uploaded_image, caption="Your upload 🌌")
+
+
 # time and date inputs
 st.time_input("⏰ watch jujutsu kaisen at:")
 st.date_input("📅 set your next binge-watch date")

@@ -7,26 +7,39 @@ from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 import time
 
-st.set_page_config(page_title="streamlit makes html look hard fr", page_icon="🌀")
+# page config
+st.set_page_config(page_title="gojo's domain expansion", page_icon="🌀")
 
+# custom css for aesthetics
 st.markdown("""
     <style>
         body {
-            font-family: 'Helvetica', sans-serif;
+            font-family: 'helvetica', sans-serif;
+            background-color: #0e1117;
+            color: #f0f0f0;
         }
         h1, h2, h3 {
             color: #00d4ff;
             text-align: center;
             font-size: 3rem;
+            text-transform: lowercase;
         }
-        #progress-bar {
+        .st-bq {
+            color: #00d4ff;
+        }
+        .st-cb {
             background-color: #1b1f3a;
+        }
+        .st-markdown {
+            text-transform: lowercase;
         }
     </style>
 """, unsafe_allow_html=True)
 
+# title
 st.markdown('<h1>👁️ the gojo satoru experience 🌌</h1>', unsafe_allow_html=True)
 
+# progress bar and messages
 progress_bar = st.progress(0)
 message_placeholder = st.empty()
 message_placeholder.write("starting the infinite void...")
@@ -37,6 +50,7 @@ time.sleep(1)
 progress_bar.progress(100)
 message_placeholder.write("you've mastered gojo's power! 🌀")
 
+# tabs
 tab1, tab2, tab3 = st.tabs(["🌀 infinity hub", "⚙️ power settings", "📊 analysis zone"])
 
 with tab1:
@@ -48,13 +62,14 @@ with tab1:
 
 with tab2:
     st.header("⚙️ customize your abilities")
-    st.slider("🎚️ control your energy", 0, 100, 50)
-    st.selectbox("choose your technique", ["blue", "red", "hollow purple"])
+    energy_level = st.slider("🎚️ control your energy", 0, 100, 50)
+    technique = st.selectbox("choose your technique", ["blue", "red", "hollow purple"])
 
 with tab3:
     st.header("📊 analyze your potential")
-    st.text_area("describe your experience in the void")
+    experience = st.text_area("describe your experience in the void")
 
+# data table
 data = pd.DataFrame({
     "technique": ["blue", "red", "hollow purple"],
     "power": [9001, 10000, 15000],
@@ -62,6 +77,7 @@ data = pd.DataFrame({
 })
 st.table(data)
 
+# download button
 csv_data = data.to_csv(index=False)
 st.download_button(
     label="download gojo technique data",
@@ -70,15 +86,17 @@ st.download_button(
     mime="text/csv"
 )
 
+# plot
 x = np.linspace(0, 10, 100)
 y = np.sin(x) * 2
 
 fig, ax = plt.subplots()
 ax.plot(x, y, color='#00d4ff', linestyle='dotted', marker='o')
 plt.grid()
-plt.title("energy wave simulation 🌌", color='white' if st.session_state.dark_mode else 'black')
-st.write(fig)
+plt.title("energy wave simulation 🌌", color='white')
+st.pyplot(fig)
 
+# sidebar
 st.sidebar.header("🌺 iris analysis (powered by gojo)")
 
 def user_input_features():
@@ -101,12 +119,13 @@ df = user_input_features()
 st.subheader("🌺 input parameters")
 st.write(df)
 
+# iris prediction
 iris = load_iris()
 X = iris.data
-y = iris.target
+Y = iris.target
 
 rf = RandomForestClassifier()
-rf.fit(X, y)
+rf.fit(X, Y)
 
 pred = rf.predict(df)
 pred_prob = rf.predict_proba(df)
@@ -126,14 +145,17 @@ st.write(pred_prob)
 time.sleep(1)
 st.balloons()
 
+# image upload
 uploaded_file = st.file_uploader("upload an image (of gojo maybe 😉)", type=["png", "jpg"])
 if uploaded_file:
     uploaded_image = Image.open(uploaded_file)
     st.image(uploaded_image, caption="your upload 🌌")
 
+# time and date inputs
 st.time_input("⏰ watch jujutsu kaisen at:")
 st.date_input("📅 set your next binge-watch date")
 
+# markdown content
 st.markdown("""
 ## **gojo's commandments**
 - never blink during a fight 🌀  

@@ -7,11 +7,9 @@ from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 import time
 
-# Initialize dark mode in session state
 if "dark_mode" not in st.session_state:
     st.session_state.dark_mode = False
 
-# Button to toggle dark mode
 if st.button("Toggle Dark Mode"):
     st.session_state.dark_mode = not st.session_state.dark_mode
 
@@ -28,12 +26,9 @@ if not st.session_state.dark_mode:
     </style>
     """, unsafe_allow_html=True)
 
-
-# Add content to your page to observe the change
 st.title("Dark Mode Toggle Example")
 st.write("Click the button to switch between dark and light mode.")
 
-# Custom CSS for Gojo Satoru vibes
 st.markdown("""
     <style>
         body {
@@ -50,10 +45,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Gojo intro
 st.markdown('<h1>👁️ the gojo satoru experience 🌌</h1>', unsafe_allow_html=True)
 
-# Gojo progress animation
 progress_bar = st.progress(0)
 message_placeholder = st.empty()
 message_placeholder.write("starting the infinite void...")
@@ -64,7 +57,6 @@ time.sleep(1)
 progress_bar.progress(100)
 message_placeholder.write("you've mastered gojo's power! 🌀")
 
-# Tabs for interactions
 tab1, tab2, tab3 = st.tabs(["🌀 infinity hub", "⚙️ power settings", "📊 analysis zone"])
 
 with tab1:
@@ -83,7 +75,6 @@ with tab3:
     st.header("📊 analyze your potential")
     st.text_area("describe your experience in the void")
 
-# Data table
 data = pd.DataFrame({
     "technique": ["blue", "red", "hollow purple"],
     "power": [9001, 10000, 15000],
@@ -91,7 +82,6 @@ data = pd.DataFrame({
 })
 st.table(data)
 
-# CSV download
 csv_data = data.to_csv(index=False)
 st.download_button(
     label="download gojo technique data",
@@ -100,7 +90,6 @@ st.download_button(
     mime="text/csv"
 )
 
-# Dynamic plot
 x = np.linspace(0, 10, 100)
 y = np.sin(x) * 2
 
@@ -110,7 +99,6 @@ plt.grid()
 plt.title("energy wave simulation 🌌", color='white' if st.session_state.dark_mode else 'black')
 st.write(fig)
 
-# Sidebar feature for iris flower app
 st.sidebar.header("🌺 iris analysis (powered by gojo)")
 
 def user_input_features():
@@ -146,31 +134,26 @@ pred_prob = rf.predict_proba(df)
 st.subheader("class labels and their corresponding index numbers")
 st.write(iris.target_names)
 
-# Divider
 st.divider()
 st.write("below this divider is an iris predictor by scikit dataset")
- 
+
 st.subheader("prediction")
 st.write(iris.target_names[pred])
 
 st.subheader('prediction probability')
 st.write(pred_prob)
 
-# 🎈 Balloons animation
 time.sleep(1)
 st.balloons()
 
-# Anime image upload
 uploaded_file = st.file_uploader("upload an image (of gojo maybe 😉)", type=["png", "jpg"])
 if uploaded_file:
     uploaded_image = Image.open(uploaded_file)
     st.image(uploaded_image, caption="your upload 🌌")
 
-# Watch party scheduling
 st.time_input("⏰ watch jujutsu kaisen at:")
 st.date_input("📅 set your next binge-watch date")
 
-# Markdown lists  
 st.markdown("""
 ## **gojo's commandments**
 - never blink during a fight 🌀  
@@ -178,7 +161,6 @@ st.markdown("""
 - always protect the weak 💎
 """)
 
-# Divider
 st.divider()
 
 st.markdown("""

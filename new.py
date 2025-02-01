@@ -16,19 +16,7 @@ if st.button("Toggle Dark Mode"):
     st.session_state.dark_mode = not st.session_state.dark_mode
 
 # Apply dark mode styles
-if st.session_state.dark_mode:
-    st.markdown("""
-    <style>
-        * {
-            background-color: black;
-            color: white;
-        }
-        .stButton button {
-            color: black;
-        }
-    </style>
-    """, unsafe_allow_html=True)
-else:
+if not st.session_state.dark_mode:
     st.markdown("""
     <style>
         * {

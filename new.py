@@ -148,7 +148,8 @@ if 'uploaded_image' not in st.session_state:
     st.session_state.uploaded_image = None
 
 st.write("wanna see ur own pic like this then upload below")
-st.image("https://github.com/HelloKeerthana/streamlit_gojostyle/blob/main/random.jpeg", caption="Your upload 🌌 if u upload")
+st.image("https://raw.githubusercontent.com/HelloKeerthana/streamlit_gojostyle/main/random.jpeg", caption="Your upload 🌌 if u upload")
+
 
 # File uploader
 uploaded_file = st.file_uploader("Upload an image (of Gojo maybe 😉)", type=["png", "jpg"])

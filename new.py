@@ -57,7 +57,6 @@ with tab1:
     st.header("🌀 enter the void")
     st.write("embrace infinity and unlock limitless possibilities")
     if st.button("💥 unleash power"):
-        st.balloons()
         st.success("you've entered gojo's domain expansion!")
 
 with tab2:
@@ -143,7 +142,6 @@ st.subheader('prediction probability')
 st.write(pred_prob)
 
 time.sleep(1)
-st.balloons()
 if 'uploaded_image' not in st.session_state:
     st.session_state.uploaded_image = None
 

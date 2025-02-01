@@ -144,13 +144,19 @@ st.write(pred_prob)
 
 time.sleep(1)
 st.balloons()
+if 'uploaded_image' not in st.session_state:
+    st.session_state.uploaded_image = None
 
-# image upload
-uploaded_file = st.file_uploader("upload an image (of gojo maybe 😉)", type=["png", "jpg"])
-if uploaded_file:
-    uploaded_image = Image.open(uploaded_file)
-    st.image(uploaded_image, caption="your upload 🌌")
+# File uploader
+uploaded_file = st.file_uploader("Upload an image (of Gojo maybe 😉)", type=["png", "jpg"])
 
+# Store the uploaded image in session state if it's not already stored
+if uploaded_file and st.session_state.uploaded_image is None:
+    st.session_state.uploaded_image = Image.open(uploaded_file)
+
+# Display the uploaded image (only if it exists in session state)
+if st.session_state.uploaded_image:
+    st.image(st.session_state.uploaded_image, caption="Your upload 🌌")
 # time and date inputs
 st.time_input("⏰ watch jujutsu kaisen at:")
 st.date_input("📅 set your next binge-watch date")

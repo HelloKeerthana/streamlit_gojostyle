@@ -7,6 +7,7 @@ from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
 import time
 
+st.set_page_config(page_title="Gojo Satoru Experience", page_icon="🌀")
 if "dark_mode" not in st.session_state:
     st.session_state.dark_mode = False
 
